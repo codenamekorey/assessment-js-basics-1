@@ -51,6 +51,23 @@ const pinkPrice = .55
 
 // CODE HERE
 
+let sum = 0;
+
+
+for (let i = 0; i < fujiAcres.length; i++){
+    sum += fujiAcres[i];
+}
+for (let i = 0; i < pinkAcres.length; i++){
+    sum += pinkAcres[i];
+}
+for (let i = 0; i < galaAcres.length; i++){
+    sum += galaAcres[i];
+}
+
+let totalAcres = sum;
+console.log(totalAcres);
+//I know you can use the reduce to make it easeier but i guess I need more practice on that so i went the long way
+
 
 
 
@@ -69,6 +86,8 @@ const pinkPrice = .55
 
 // CODE HERE
 
+let averageDailyAcres = totalAcres / 7 ;
+console.log(averageDailyAcres);
 
 
 
@@ -106,8 +125,15 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
-
-
+for (let i = 7; i >= 0; i--){
+    if(i !== 0){
+        acresLeft = acresLeft - 9;
+        days = days + 1;
+    }
+}
+console.log(acresLeft);
+console.log(days);
+//DJ really helped me understand looping backwards
 
 // PROBLEM 4
 
