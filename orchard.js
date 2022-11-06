@@ -50,24 +50,25 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+let totalAcres = 0;
 
-let sum = 0;
-
-
+ 
+/*The varible i is being run by the length of fuji acres 
+it then runs and add until it gets to the end of the array*/ 
 for (let i = 0; i < fujiAcres.length; i++){
-    sum += fujiAcres[i];
+    totalAcres += fujiAcres[i] + pinkAcres[i] + galaAcres[i];
 }
-for (let i = 0; i < pinkAcres.length; i++){
-    sum += pinkAcres[i];
+/*
+for (let i =0; i < pinkAcres.length; i++){
+    pinkAcres += pinkAcres[i];
 }
 for (let i = 0; i < galaAcres.length; i++){
-    sum += galaAcres[i];
+    totalAcres += galaAcres[i];
 }
 
-let totalAcres = sum;
 console.log(totalAcres);
-//I know you can use the reduce to make it easeier but i guess I need more practice on that so i went the long way
-
+*/
+console.log(totalAcres);
 
 
 
@@ -85,7 +86,7 @@ console.log(totalAcres);
 */
 
 // CODE HERE
-
+/*it takes the total acres and divided it by the week and logs it into the averageDailyAcres */
 let averageDailyAcres = totalAcres / 7 ;
 console.log(averageDailyAcres);
 
@@ -125,15 +126,24 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
-for (let i = 7; i >= 0; i--){
+/*for (let i = 7; i >= 0; i--){
     if(i !== 0){
         acresLeft = acresLeft - 9;
         days = days + 1;
     }
 }
 console.log(acresLeft);
+console.log(days);*/
+while(acresLeft >= 0){
+    days += 1;
+    acresLeft = acresLeft - 9;
+    
+}
 console.log(days);
-//DJ really helped me understand looping backwards
+console.log(acresLeft);
+
+
+
 
 // PROBLEM 4
 
@@ -155,13 +165,18 @@ console.log(days);
     to make copies of the arrays and 
     then loop the copies. You could also
     make empty arrays, loop the old ones
-    and use the push method to add new 
+    and use the push method to add new  
     values to the new arrays.
 */
 
 // CODE HERE
 
-// let fujiTons =
+ let fujiTons = fujiAcres.slice(0,7);
+ let funiTonTotal = 0;
+ for (let i = 0; i < fujiTons.length; i++){
+    fujiTons += fujiTons[i] *6.7
+ }
+ console.log(fujiTons);
 // let galaTons =
 // let pinkTons =
 
@@ -234,4 +249,4 @@ console.log(days);
     Log `totalProfit` to the console.
 */
 
-// CODE HERE
+// CODE HEREE
