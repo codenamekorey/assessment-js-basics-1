@@ -68,7 +68,7 @@ for (let i = 0; i < galaAcres.length; i++){
 
 console.log(totalAcres);
 */
-console.log(totalAcres);
+console.log(`Total acres: ${totalAcres}`);
 
 
 
@@ -88,7 +88,7 @@ console.log(totalAcres);
 // CODE HERE
 /*it takes the total acres and divided it by the week and logs it into the averageDailyAcres */
 let averageDailyAcres = totalAcres / 7 ;
-console.log(averageDailyAcres);
+console.log(`${averageDailyAcres} is the daily average of apples picked.`);
 
 
 
@@ -139,8 +139,8 @@ while(acresLeft >= 0){
     acresLeft = acresLeft - 9;
     
 }
-console.log(days);
-console.log(acresLeft);
+console.log(`${days} days left`);
+
 
 
 
@@ -172,14 +172,29 @@ console.log(acresLeft);
 // CODE HERE
 
  let fujiTons = fujiAcres.slice(0,7);
- let funiTonTotal = 0;
- for (let i = 0; i < fujiTons.length; i++){
-    fujiTons += fujiTons[i] *6.7
- }
- console.log(fujiTons);
-// let galaTons =
-// let pinkTons =
+ let fujiTonTotal = 0;
+ for (let i = 0; i < 
+    fujiTons.length; i += 1) {
+    // take every item in the array and add it to sum variable
+    fujiTonTotal += fujiTons[i] *6.7
+    }
+   console.log(`The fuji ton: ${fujiTonTotal}`);
+   
+let galaTons = galaAcres.slice(0,7);
+ let galaTonsTotal = 0;
+ for (let i = 0; i < 
+    galaTons.length; i += 1) {
+    galaTonsTotal += galaTons[i] *6.7
+    }
+   console.log(`The gala ton: ${galaTonsTotal}`);
 
+ let pinkTons = pinkAcres.slice(0,7);
+ let pinkTonsTotal = 0;
+ for (let i = 0; i < 
+    pinkTons.length; i += 1) {
+    pinkTonsTotal += pinkTons[i] *6.7
+    }
+   console.log(`The pink ton: ${pinkTonsTotal}`);
 
 
 
@@ -203,9 +218,12 @@ console.log(acresLeft);
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+ let fujiPounds = fujiTonTotal * 2000;
+ console.log(`The fuji is ${fujiPounds} pounds`);
+ let galaPounds = galaTonsTotal * 2000;
+ console.log(`The gala is ${galaPounds} pounds`);
+ let pinkPounds = pinkTonsTotal  * 2000;
+ console.log(`The pink is ${pinkPounds} pounds`);
 
 
 
@@ -230,9 +248,14 @@ console.log(acresLeft);
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit =   fujiPounds * fujiPrice;
+console.log(`The fuji profit is ${fujiProfit}`);
+
+ let galaProfit = galaPounds * galaPrice;
+ console.log(`The gala profit is ${galaProfit}`);
+
+ let pinkProfit = pinkPounds * pinkPrice;
+ console.log(`The pink profit is ${pinkProfit}`);
 
 
 
@@ -250,3 +273,6 @@ console.log(acresLeft);
 */
 
 // CODE HEREE
+let totalProfit = fujiProfit + galaProfit + pinkProfit;
+
+console.log(`The total profit is ${totalProfit}`);
